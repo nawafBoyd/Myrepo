@@ -1,0 +1,221 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function uc_multi_currency_schema() {
+  $schema = array();
+
+  $schema['uc_multi_currency'] = array(
+    'description' => 'Currency information based on ISO 4127.',
+    'fields' => array(
+      'cid' => array(
+        'description' => 'ISO 4127 code.',
+        'type' => 'varchar',
+        'length' => 3,
+        'not null' => TRUE,
+      ),
+      'name' => array(
+        'description' => 'Human readable name.',
+        'type' => 'varchar',
+        'length' => 255,
+      ),
+      'positive' => array(
+        'description' => 'Display pattern for positive values.',
+        'type' => 'varchar',
+        'length' => 24,
+      ),
+      'negative' => array(
+        'description' => 'Display pattern for negative values.',
+        'type' => 'varchar',
+        'length' => 24,
+      ),
+      'enabled' => array(
+        'description' => 'Status.',
+        'type' => 'int',
+        'size' => 'tiny',
+        'default' => TRUE,
+      ),
+      'symbol' => array(
+        'description' => 'Currency symbol.',
+        'type' => 'varchar',
+        'length' => 24,
+      ),
+      'group_char' => array(
+        'description' => 'Digit grouping character.',
+        'type' => 'varchar',
+        'length' => 1,
+      ),
+      'dec_char' => array(
+        'description' => 'Decimal separator character.',
+        'type' => 'varchar',
+        'length' => 1,
+      ),
+      'prec' => array(
+        'description' => 'Decimal precision.',
+        'type' => 'int',
+        'size' => 'tiny',
+        'default' => 2,
+      ),
+      'prefix' => array(
+        'description' => 'Symbol position.',
+        'type' => 'int',
+        'size' => 'tiny',
+        'default' => TRUE,
+      ),
+    ),
+    'primary key' => array('cid'),
+  );
+
+  $schema['uc_multi_currency_prices'] = array(
+    'description' => 'Product prices.',
+    'fields' => array(
+      'nid' => array(
+        'description' => 'The {node}.nid of the product.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'cid' => array(
+        'description' => 'The {uc_multi_currency}.cid of the currency.',
+        'type' => 'varchar',
+        'length' => 3,
+        'not null' => TRUE,
+      ),
+      'list_price' => array(
+        'description' => 'Suggested retail price.',
+        'type' => 'numeric',
+        'precision' => 16,
+        'scale' => 5,
+        'not null' => TRUE,
+        'default' => 0.0,
+      ),
+      'cost' => array(
+        'description' => 'The amount the store pays to sell the product.',
+        'type' => 'numeric',
+        'precision' => 16,
+        'scale' => 5,
+        'not null' => TRUE,
+        'default' => 0.0,
+      ),
+      'sell_price' => array(
+        'description' => 'The amount the customer pays for the product.',
+        'type' => 'numeric',
+        'precision' => 16,
+        'scale' => 5,
+        'not null' => TRUE,
+        'default' => 0.0,
+      ),
+    ),
+    'indexes' => array(
+      'nid' => array('nid'),
+      'cid' => array('cid'),
+    ),
+  );
+
+  $schema['uc_multi_currency_attr_prices'] = array(
+    'description' => 'Attribute prices.',
+    'fields' => array(
+      'nid' => array(
+        'description' => 'The {node}.nid of the product.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'default' => 0,
+      ),
+      'cid' => array(
+        'description' => 'The {uc_multi_currency}.cid of the currency.',
+        'type' => 'varchar',
+        'length' => 3,
+        'not null' => TRUE,
+      ),
+      'aid' => array(
+        'description' => 'The {uc_attributes}.aid of the attribute.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'oid' => array(
+        'description' => 'The {uc_attribute_options}.oid of the option.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'cost' => array(
+        'description' => 'The amount the store pays to sell the option.',
+        'type' => 'numeric',
+        'precision' => 16,
+        'scale' => 5,
+        'not null' => TRUE,
+        'default' => 0.0,
+      ),
+      'price' => array(
+        'description' => 'The amount the customer pays for the option.',
+        'type' => 'numeric',
+        'precision' => 16,
+        'scale' => 5,
+        'not null' => TRUE,
+        'default' => 0.0,
+      ),
+    ),
+    'indexes' => array(
+      'nid' => array('nid'),
+      'cid' => array('cid'),
+      'aid' => array('aid'),
+      'oid' => array('oid'),
+    ),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function uc_multi_currency_install() {
+  $weight = db_select('system', 's')
+    ->fields('s', array('weight'))
+    ->condition('name', 'uc_product')
+    ->execute()
+    ->fetchField();
+  db_update('system')
+    ->fields(array('weight' => $weight + 1))
+    ->condition('name', 'uc_multi_currency')
+    ->execute();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function uc_multi_currency_uninstall() {
+  variable_del('uc_multi_currency_use_localized');
+  db_delete('variable')
+    ->condition('name', 'uc_multi_currency_use_localized_%', 'LIKE')
+    ->execute();
+  variable_del('uc_multi_currency_use_roles');
+  db_delete('variable')
+    ->condition('name', 'uc_multi_currency_use_roles_%', 'LIKE')
+    ->execute();
+  variable_del('uc_multi_currency_use_types');
+  db_delete('variable')
+    ->condition('name', 'uc_multi_currency_use_types_%', 'LIKE')
+    ->execute();
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function uc_multi_currency_requirements($phase) {
+  $requirements = array();
+
+  $loaded = extension_loaded('BCMath');
+  $requirements['uc_multi_currency_bcmath'] = array(
+    'title' => t('PHP BCMath extension'),
+    'value' => $loaded ? t('Found') : t('Not found'),
+    'severity' => $loaded ? REQUIREMENT_OK : REQUIREMENT_ERROR,
+  );
+
+  return $requirements;
+}

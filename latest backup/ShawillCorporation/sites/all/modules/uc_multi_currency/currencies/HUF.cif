@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * Implements hook_install() using the name of the currency as the base of
+ * the function name.
+ */
+function uc_multi_currency_HUF_install() {
+//  $cid = 348;
+  $cid = 'HUF';
+  $name = 'Hungarian forint';
+  $positive = '# ###,## Ft';
+  $negative = '-# ###,## Ft';
+  $processed = _uc_multi_currency_process_pattern($positive);
+  db_insert('uc_multi_currency')
+    ->fields(array(
+      'cid' => $cid,
+      'name' => $name,
+      'positive' => $positive,
+      'negative' => $negative,
+      'enabled' => 1,
+      'symbol' => $processed['symbol'],
+      'group_char' => $processed['grouping'],
+      'dec_char' => $processed['decimal'],
+      'prec' => $processed['precision'],
+      'prefix' => intval($processed['prefix']),
+    ))
+    ->execute();
+  return $processed['result'];
+}

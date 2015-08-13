@@ -1,0 +1,25 @@
+name = Multi-Currency
+description = Provides multi-currency handling.
+core = 7.x
+package = Ubercart - extra
+php = 5.3
+dependencies[] = uc_product
+files[] = views/uc_multi_currency_handler_field_currency_code.inc
+files[] = views/uc_multi_currency_handler_field_currency_name.inc
+files[] = views/uc_multi_currency_handler_field_order_total.inc
+files[] = views/uc_multi_currency_handler_field_order_total_cost.inc
+files[] = views/uc_multi_currency_handler_field_price.inc
+files[] = views/uc_multi_currency_handler_field_display_price.inc
+files[] = views/uc_multi_currency_handler_filter_product.inc
+stylesheets[all][] = uc_multi_currency.css
+configure = admin/store/settings/currency
+version = "7.x-1.0"
+core = "7.x"
+project = "uc_multi_currency"
+
+; Information added by Drupal.org packaging script on 2014-07-14
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "uc_multi_currency"
+datestamp = "1405332228"
+

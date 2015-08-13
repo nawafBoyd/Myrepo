@@ -1,0 +1,494 @@
+# $Id$
+# Russian translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+# uc_multi_currency.admin.inc: n/a
+# uc_multi_currency.tokens.inc: n/a
+# uc_multi_currency.module: n/a
+# uc_multi_currency.providers.inc: n/a
+# providers/uc_multi_currency_provider_localized.inc: n/a
+# providers/uc_multi_currency_provider_roles.inc: n/a
+# providers/uc_multi_currency_provider_taxonomy.inc: n/a
+# providers/uc_multi_currency_provider_types.inc: n/a
+# uc_multi_currency.theme.inc: n/a
+# views/uc_multi_currency_handler_field_display_price.inc: n/a
+# views/uc_multi_currency.views.inc: n/a
+# uc_multi_currency.install: n/a
+# uc_multi_currency.info: n/a
+# uc_multi_currency.js: n/a
+# providers/uc_multi_currency_provider_manual.inc: n/a
+# views/uc_multi_currency_handler_field_price.inc: n/a
+# views/uc_multi_currency_handler_field_order_total.inc: n/a
+# Deák Jahn Gábor <deakjahn@gnetprint.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-07-14 16:04+0200\n"
+"PO-Revision-Date: 2013-07-14 16:11+0200\n"
+"Last-Translator: Deák Jahn Gábor <deakjahn@gnetprint.com>\n"
+"Language-Team: GNP Software Dept\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.6.1\n"
+
+#: uc_multi_currency.admin.inc:30
+msgid "disable"
+msgstr "отключить"
+
+#: uc_multi_currency.admin.inc:30
+msgid "enable"
+msgstr "включить"
+
+#: uc_multi_currency.admin.inc:31
+msgid "edit"
+msgstr "изменить"
+
+#: uc_multi_currency.admin.inc:32
+msgid "delete"
+msgstr "удалить"
+
+#: uc_multi_currency.admin.inc:49
+msgid "Import currencies"
+msgstr ""
+
+#: uc_multi_currency.admin.inc:55
+msgid "To import new currency data, select it in the list and click the import button. If you are using a custom or contributed import file, it must be placed in the Ubercart folder contrib/uc_multi_currency/currencies."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:59 uc_multi_currency.tokens.inc:9 uc_multi_currency.module:504;581;622
+msgid "Currency"
+msgstr ""
+
+#: uc_multi_currency.admin.inc:67
+msgid "Import"
+msgstr "Импорт"
+
+#: uc_multi_currency.admin.inc:72
+msgid "Code"
+msgstr "Код"
+
+#: uc_multi_currency.admin.inc:73;187
+msgid "Name"
+msgstr "Название"
+
+#: uc_multi_currency.admin.inc:74
+msgid "Positive / Negative"
+msgstr ""
+
+#: uc_multi_currency.admin.inc:75 uc_multi_currency.providers.inc:129
+msgid "Operations"
+msgstr "Действия"
+
+#: uc_multi_currency.admin.inc:82 uc_multi_currency.module:514;590;665
+msgid "No currencies are defined."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:128
+msgid "Currency file @file imported."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:131
+msgid "Currency file @file could not import or had no install function."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:179
+msgid "Edit currency %name"
+msgstr ""
+
+#: uc_multi_currency.admin.inc:182
+msgid "Add currency"
+msgstr ""
+
+#: uc_multi_currency.admin.inc:188
+msgid "User readable name of the currency."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:195
+msgid "Alphabetic code"
+msgstr ""
+
+#: uc_multi_currency.admin.inc:196
+msgid "Alphabetic code as specified by the <a href=\"http://en.wikipedia.org/wiki/ISO_4217\">ISO 4217 standard.</a> Exactly three letters."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:204
+msgid "Patterns"
+msgstr "Шаблоны"
+
+#: uc_multi_currency.admin.inc:205
+msgid "Six or more # characters denote the amount. Use decimal and grouping separators inside the amount as necessary. Prepend or append the currency symbol with or without space, as required. Examples:"
+msgstr ""
+
+#: uc_multi_currency.admin.inc:212
+msgid "Display pattern for positive values"
+msgstr ""
+
+#: uc_multi_currency.admin.inc:219
+msgid "Display pattern for negative values"
+msgstr ""
+
+#: uc_multi_currency.admin.inc:248 providers/uc_multi_currency_provider_localized.inc:29 providers/uc_multi_currency_provider_roles.inc:29 providers/uc_multi_currency_provider_taxonomy.inc:31 providers/uc_multi_currency_provider_types.inc:29
+msgid "Save configuration"
+msgstr "Сохранить настройки"
+
+#: uc_multi_currency.admin.inc:271
+msgid "The currency %name has been saved."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:280
+msgid "The alphabetic code should be exactly three letters."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:285
+msgid "The currency code is already in use."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:298;301
+msgid "The pattern cannot be interpreted."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:308
+msgid "The currency symbol is invalid."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:315
+msgid "The digit grouping character is invalid or doesn't match."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:322
+msgid "The decimal separator character is invalid or doesn't match."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:329
+msgid "The number of decimal digits is invalid or doesn't match."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:378
+msgid "Are you sure you want to delete the currency \"!name\"? All prices of all products set for this currency will be lost."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:381
+msgid "Delete"
+msgstr "Удалить"
+
+#: uc_multi_currency.admin.inc:391
+msgid "The currency has been deleted."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:410
+msgid "The currency %name has been enabled."
+msgstr ""
+
+#: uc_multi_currency.admin.inc:413
+msgid "The currency %name has been disabled."
+msgstr ""
+
+#: uc_multi_currency.providers.inc:39
+msgid "Weight for @title"
+msgstr "Вес @title"
+
+#: uc_multi_currency.providers.inc:50
+msgid "@title currency usage provider"
+msgstr ""
+
+#: uc_multi_currency.providers.inc:60
+msgid "configure"
+msgstr "настроить"
+
+#: uc_multi_currency.providers.inc:69
+msgid "Save settings"
+msgstr "Сохранить настройки"
+
+#: uc_multi_currency.providers.inc:91
+msgid "Currency selection configuration saved."
+msgstr ""
+
+#: uc_multi_currency.providers.inc:125
+msgid "Detection method"
+msgstr "Метод определения"
+
+#: uc_multi_currency.providers.inc:126
+msgid "Description"
+msgstr "Описание"
+
+#: uc_multi_currency.providers.inc:127
+msgid "Enabled"
+msgstr "Включено"
+
+#: uc_multi_currency.providers.inc:128 uc_multi_currency.theme.inc:121
+msgid "Weight"
+msgstr "Вес"
+
+#: uc_multi_currency.theme.inc:117
+msgid "Options"
+msgstr "Параметры"
+
+#: uc_multi_currency.theme.inc:118
+msgid "Default"
+msgstr "По умолчанию"
+
+#: uc_multi_currency.theme.inc:119 uc_multi_currency.module:506;582;623
+msgid "Cost"
+msgstr "Стоимость"
+
+#: uc_multi_currency.theme.inc:120 uc_multi_currency.module:583;624 views/uc_multi_currency_handler_field_display_price.inc:10
+msgid "Price"
+msgstr "Цена"
+
+#: uc_multi_currency.theme.inc:122
+msgid "List position"
+msgstr "Позиция в списке"
+
+#: uc_multi_currency.theme.inc:162
+msgid "This attribute does not have any options."
+msgstr "Данный атрибут не имеет параметров."
+
+#: uc_multi_currency.theme.inc:171
+msgid "This product does not have any attributes."
+msgstr "Данный товар не имеет атрибутов."
+
+#: uc_multi_currency.theme.inc:174
+msgid "This product class does not have any attributes."
+msgstr "У этого класса товара нет атрибутов."
+
+#: uc_multi_currency.tokens.inc:10
+msgid "Tokens related to Ubercart currencies."
+msgstr ""
+
+#: uc_multi_currency.tokens.inc:18 views/uc_multi_currency.views.inc:11
+msgid "Currency code"
+msgstr "Код валюты"
+
+#: uc_multi_currency.tokens.inc:19
+msgid "The ISO 4217 code of the order currency."
+msgstr ""
+
+#: uc_multi_currency.tokens.inc:25 views/uc_multi_currency.views.inc:21
+msgid "Currency name"
+msgstr ""
+
+#: uc_multi_currency.tokens.inc:26
+msgid "The order currency."
+msgstr ""
+
+#: uc_multi_currency.module:124
+msgid "Administer currencies"
+msgstr ""
+
+#: uc_multi_currency.module:127
+msgid "Choose currency during purchase"
+msgstr ""
+
+#: uc_multi_currency.module:181
+msgid "Define how to decide which currency is used. This decision is made by evaluating a series of detection methods; the first detection method that gets a result will determine which currency is used. Define the order of evaluation of currency detection methods on this page."
+msgstr ""
+
+#: uc_multi_currency.module:184
+msgid "Leaving a currency <em>undecided</em> will return to the next provider in the configuration list."
+msgstr ""
+
+#: uc_multi_currency.module:187
+msgid "<em>Note that the multi-currency prices override the base price settings.</em>"
+msgstr ""
+
+#: uc_multi_currency.module:505
+msgid "List price"
+msgstr "Нормативная цена поставщика"
+
+#: uc_multi_currency.module:505
+msgid "The listed MSRP."
+msgstr ""
+"Рекомендованная стоимость "
+"производителя товара"
+
+#: uc_multi_currency.module:506
+msgid "Your store's cost."
+msgstr "Стоимость товара для Вашего магазина."
+
+#: uc_multi_currency.module:507
+msgid "Sell price"
+msgstr "Стоимость для продажи"
+
+#: uc_multi_currency.module:507
+msgid "Customer purchase price."
+msgstr "Стоимость товара для покупателей."
+
+#: uc_multi_currency.module:515;591;631
+msgid "Multi-currency prices"
+msgstr ""
+
+#: uc_multi_currency.module:666
+msgid "Prices in @currency"
+msgstr ""
+
+#: uc_multi_currency.module:837
+msgid "Balance"
+msgstr "Баланс"
+
+#: uc_multi_currency.module:851
+msgid "Use the <a href=\"/admin/store/settings/currency\">settings</a> of the Ubercart Multi-Currency module instead."
+msgstr ""
+
+#: uc_multi_currency.module:891
+msgid "Selected by user"
+msgstr ""
+
+#: uc_multi_currency.module:892
+msgid "Currency selected by the user"
+msgstr ""
+
+#: uc_multi_currency.module:897
+msgid "Localized pages"
+msgstr ""
+
+#: uc_multi_currency.module:898
+msgid "Select currencies based on localization"
+msgstr ""
+
+#: uc_multi_currency.module:903
+msgid "User roles"
+msgstr "Роли пользователя"
+
+#: uc_multi_currency.module:904
+msgid "Select currencies based on user roles"
+msgstr ""
+
+#: uc_multi_currency.module:909
+msgid "Product content type"
+msgstr ""
+
+#: uc_multi_currency.module:910
+msgid "Select currencies based on product content type"
+msgstr ""
+
+#: uc_multi_currency.module:915
+msgid "Taxonomy"
+msgstr "Таксономия"
+
+#: uc_multi_currency.module:916
+msgid "Select currencies based on taxonomy"
+msgstr ""
+
+#: uc_multi_currency.module:1015;1037
+msgid "Choose currency"
+msgstr "Выбрать валюту"
+
+#: uc_multi_currency.module:10
+msgid "Manage available currencies and configure display formats."
+msgstr ""
+
+#: uc_multi_currency.module:11;18
+msgid "Currencies"
+msgstr ""
+
+#: uc_multi_currency.module:23
+msgid "Add new currency"
+msgstr ""
+
+#: uc_multi_currency.module:31
+msgid "Enable"
+msgstr "Включить"
+
+#: uc_multi_currency.module:39
+msgid "Edit"
+msgstr "Редактировать"
+
+#: uc_multi_currency.module:47
+msgid "Remove"
+msgstr "Удалить"
+
+#: uc_multi_currency.module:56
+msgid "Selection"
+msgstr "Выбор"
+
+#: uc_multi_currency.module:64;72;80;88;96
+msgid "Currency selection provider configuration"
+msgstr ""
+
+#: uc_multi_currency.module:105
+msgid "Set currency"
+msgstr ""
+
+#: uc_multi_currency.module:106
+msgid "Set active currency for the current user"
+msgstr ""
+
+#: uc_multi_currency.install:215
+msgid "PHP BCMath extension"
+msgstr ""
+
+#: uc_multi_currency.install:216
+msgid "Found"
+msgstr ""
+
+#: uc_multi_currency.install:216
+msgid "Not found"
+msgstr "Не найдено"
+
+#: uc_multi_currency.info:0
+msgid "Multi-Currency"
+msgstr ""
+
+#: uc_multi_currency.info:0
+msgid "Provides multi-currency handling."
+msgstr ""
+
+#: uc_multi_currency.info:0
+msgid "Ubercart - extra"
+msgstr "Ubercart - дополнительно"
+
+#: uc_multi_currency.js:0;0
+msgid "Not shippable"
+msgstr "Недоставляемый"
+
+#: uc_multi_currency.js:0
+msgid "SKU"
+msgstr "Артикул"
+
+#: uc_multi_currency.js:0
+msgid "Shippable"
+msgstr "Доставляемый"
+
+#: providers/uc_multi_currency_provider_localized.inc:13 providers/uc_multi_currency_provider_roles.inc:13 providers/uc_multi_currency_provider_taxonomy.inc:13 providers/uc_multi_currency_provider_types.inc:13
+msgid "undecided"
+msgstr ""
+
+#: providers/uc_multi_currency_provider_manual.inc:15
+msgid "There are no configurable settings."
+msgstr ""
+
+#: providers/uc_multi_currency_provider_manual.inc:20
+msgid "Cancel"
+msgstr "Отменить"
+
+#: views/uc_multi_currency.views.inc:12;15
+msgid "The currency code of the order."
+msgstr ""
+
+#: views/uc_multi_currency.views.inc:22;25
+msgid "The currency name of the order."
+msgstr ""
+
+#: views/uc_multi_currency_handler_field_display_price.inc:38 views/uc_multi_currency_handler_field_price.inc:69
+msgid " + !tax"
+msgstr ""
+
+#: views/uc_multi_currency_handler_field_order_total.inc:40 views/uc_multi_currency_handler_field_price.inc:22
+msgid "Format"
+msgstr "Формат"
+
+#: views/uc_multi_currency_handler_field_order_total.inc:43 views/uc_multi_currency_handler_field_price.inc:25
+msgid "Ubercart multi-currency price"
+msgstr ""
+
+#: views/uc_multi_currency_handler_field_order_total.inc:44 views/uc_multi_currency_handler_field_price.inc:27
+msgid "Numeric"
+msgstr "Числовая"
+
+#: views/uc_multi_currency_handler_field_price.inc:26
+msgid "Ubercart multi-currency price (excl. VAT)"
+msgstr ""

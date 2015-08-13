@@ -1,0 +1,11 @@
+ul.uc-multi-currency-chooser {
+  list-style: none inside none;
+}
+ul.uc-multi-currency-chooser li {
+  list-style: none inside none;
+  padding-left: 3px !important;
+  margin-left: 3px !important;
+}
+ul.uc-multi-currency-chooser li.active {
+  background: #eeeeee;
+}
